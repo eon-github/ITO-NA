@@ -1,0 +1,33 @@
+{{#if loginData}}
+    <!-- Code for login data not null -->
+    <form
+        name="logout"
+        action="/logout-user"
+        method="POST"
+        class="popup-login-content"
+    >
+        <h1 onclick="closeLogIn()" id="close-login" type="submit">x</h1>
+        <img src="/images/LOGO-YL.png" alt="None" />
+        <input id="userlogin" name="userlogin" type="text" readonly value="{{loginData.username}}">
+        <button class="login-button bold" type="submit" onclick="">Log Out</button>
+    </form>
+{{else}}
+    <form
+        name="login"
+        action="/read-user"
+        method="POST"
+        class="popup-login-content"
+    >
+        <h1 onclick="closeLogIn()" id="close-login" type="submit">x</h1>
+        <img src="/images/LOGO-YL.png" alt="None" />
+        <input id="userlogin" name="userlogin" type="text" placeholder="Enter Username" required></input>
+        <input id="passlogin" name="passlogin" type="password" placeholder="Enter Password" required></input>
+        <div class="remember-class">
+            <label for="remember">Remember Me</label> 
+            <input id="remember" name="remember" class="remember-input" type="checkbox">
+            <button id="loginbttn" class="login-button bold" type="submit" onclick="">Log in</button>
+        </div>
+
+
+    </form>
+{{/if}}
