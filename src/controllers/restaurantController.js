@@ -668,7 +668,7 @@ app.post('/update-profile', upload.single('img'), async (req, res) => {
   // const avatarImgPath = req.file ? path.join('/images', req.file.filename) : undefined;
   // const avatarImgPath = req.file ? /images/${req.file.filename} : undefined;
   // Inside your /update-profile route
-  const avatarImgPath = req.file ? /images/${req.file.filename} : undefined;
+  // const avatarImgPath = req.file ? /images/${req.file.filename} : undefined;
 
   const currentUsername = loginInfo.username;
 
